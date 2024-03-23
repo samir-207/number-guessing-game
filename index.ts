@@ -7,16 +7,17 @@ import inquirer from "inquirer";
 // 2.Ask user to guess a number.
 // 3.Compare both numbers and show result.
 
-const randNumb =  Math.floor(Math.random() * 10 +1);
-const ans = await inquirer.prompt([{
+const randNumb = Math.floor(Math.random() * 10 + 1);
+const ans = await inquirer.prompt([
+  {
     message: "Guess a number b/w 1-10 =",
     type: "number",
     name: "numbGuessed",
-    }
+  },
 ]);
 
-if(ans.numbGuessed === randNumb){
-    console.log("CONGRATS!!! YOU GUESSED THE SAME COMPUTER DID");
+if (ans.numbGuessed === randNumb) {
+  console.log("CONGRATS!!! YOU GUESSED THE SAME COMPUTER DID");
 } else {
-    console.log("SORRY!!! WRONG GUESS")
+  console.log("SORRY!!! WRONG GUESS");
 }
